@@ -1,0 +1,251 @@
+/*
+ Theme Name:   Bootstrap Studio
+ Theme URI:    https://bootstrapstudio.io/
+ Description:  Bootstrap Studio Theme (child of Twenty Sixteen)
+ Author:       Zine EOOD
+ Author URI:   http://zine.bg
+ Template:     twentysixteen
+ Version:      1.0.0
+ License:      Proprietary
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  bootstrapstudio
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
+
+
+/* General overrides */
+
+body{
+	background-color:#fff;
+	padding-top: 68px;
+}
+
+body:before,
+body:after{
+	display:none !important;
+}
+
+body, button, input, select, textarea {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+body, input, select, textarea {
+    color: #3D4044;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+.entry-content blockquote:not(.alignleft):not(.alignright),
+.entry-summary blockquote,
+.comment-content blockquote{
+	margin-left:0 !important;
+}
+
+blockquote {
+    border: 0 solid #E6E6E6;
+    border-left-width: 2px;
+    padding-left: 15px;
+}
+
+/* Header */
+
+#masthead{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #222;
+	z-index: 1;
+	padding: 0;
+	color: #fff !important;
+	border-bottom: 1px solid #212121;
+}
+
+#masthead .site-title a:before{
+	content:'';
+	width:40px;
+	height:40px;
+	display:inline-block;
+	margin-right: 12px;
+	background-size: contain;
+	vertical-align: middle;
+}
+
+#masthead .site-branding .site-title a {
+	font:normal 19px/21px 'Source Sans Pro', sans-serif !important;
+	color:inherit !important;
+}
+
+#masthead .site-description{
+	display: none;
+}
+
+#masthead .site-branding, .site-header-menu, .header-image{
+	margin:0;
+}
+
+#masthead .site-header-main{
+	padding: 14px 60px;
+	max-width: 1320px;
+	margin: 0 auto;
+	display: block;
+	overflow: hidden;
+}
+
+#masthead .site-header-menu{
+	float:right;
+}
+
+#masthead .site-header-main .site-branding{
+	float:left;
+}
+
+#masthead .main-navigation{
+	margin-top: 4px;
+	margin-right: 0;
+}
+
+#masthead .main-navigation a{
+	font:normal 15px/1 'Source Sans Pro', sans-serif !important;
+	color:inherit !important;
+	padding: 15px;
+	margin-top: -6px;
+	margin-left:0;
+	margin-right:0;
+	outline: none;
+}
+
+#masthead .site-header-menu a:hover{
+	background-color: #090909;
+}
+
+#masthead .site-header-menu:not(.toggled-on) li:last-child a{
+	background-color: #2780e3;
+	border-color: #2780e3;
+	margin-left:10px;
+	padding: 15px 18px;
+}
+
+#masthead .site-header-menu:not(.toggled-on) li:last-child a:hover{
+	background-color: #1967be;
+	border-color: #1862b5;
+}
+
+#masthead .site-header-menu.toggled-on{
+	float: none;
+	margin-top: 70px;
+}
+
+#masthead #menu-toggle{
+	float: right;
+	color: #fff !important;
+	border-color:#fff;
+	margin: 0;
+}
+
+#masthead .main-navigation .primary-menu,
+#masthead .main-navigation li{
+	border-color:#555;
+}
+
+
+@media(max-width:710px){
+
+	#masthead .site-header-main{
+		padding-left:7.6923%;
+		padding-right:7.6923%;
+	}
+
+}
+
+/* Font and line overrides */
+
+.entry-title,
+.page-title,
+.comments-title, 
+.comment-reply-title,
+.comment-form label,
+.comment-reply-link,
+.widget .widget-title,
+.entry-footer,
+.comment-metadata, .pingback .edit-link,
+button, button[disabled]:hover, button[disabled]:focus, input[type="button"], input[type="button"][disabled]:hover, input[type="button"][disabled]:focus, input[type="reset"], input[type="reset"][disabled]:hover, input[type="reset"][disabled]:focus, input[type="submit"], input[type="submit"][disabled]:hover, input[type="submit"][disabled]:focus
+{
+    /*font-family: Arial, Helvetica, sans-serif;*/
+	font-family: "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
+}
+
+.entry-title,
+.page-title,
+.comments-title, 
+.comment-reply-title{
+	font-weight: 300;
+}
+
+.type-post .entry-title {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 42px;
+}
+
+.widget{
+	border-top:none;
+}
+
+.comments-title, .comment-reply-title {
+    border-top: 1px solid #ddd;
+}
+
+.page-header,
+.comment-list article, .comment-list .pingback, .comment-list .trackback{
+	border-top:none;
+}
+
+/* Posts */
+
+body:not(.search-results) article:not(.type-page) .entry-content{
+	float: none;
+	margin-bottom: 50px;
+	width: auto;
+}
+
+body:not(.search-results) article:not(.type-page) .entry-footer{
+	float: none;
+	width: auto
+}
+
+.author.vcard img {
+    display: none !important;
+}
+
+.entry-content a, .entry-summary a, .taxonomy-description a, .logged-in-as a, .comment-content a, .pingback .comment-body > a, .textwidget a, .entry-footer a:hover, .site-info a:hover{
+	box-shadow:none;
+}
+
+.site{
+	padding-top: 20px;
+}
+
+.site-footer .site-title:after{ display: none}
+
+
+.entry-content ul,
+.entry-summary ul,
+.comment-content ul,
+.entry-content ol,
+.entry-summary ol,
+.comment-content ol {
+	margin-left:1.5em;
+}
+
+
+@media screen and (min-width: 44.375em){
+	.entry-content ul, .entry-summary ul, .comment-content ul, .entry-content ol, .entry-summary ol, .comment-content ol {
+		margin-left: 30px;
+	}
+}
