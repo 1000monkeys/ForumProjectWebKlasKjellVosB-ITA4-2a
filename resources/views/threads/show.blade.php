@@ -69,20 +69,22 @@
         @empty
             <p>Er zijn op dit moment nog geen comments!</p>
         @endforelse
-        <div class="row">
-            <div class="col-md-8">
-                <form method="POST" action="{{ url($thread->path()) }}/reply">
-                    {{ csrf_field() }}
-                    <textarea name="editor1" id="editor1">
+        @if (!User::guest())
+            <div class="row">
+                <div class="col-md-8">
+                    <form method="POST" action="{{ url($thread->path()) }}/reply">
+                        {{ csrf_field() }}
+                        <textarea name="editor1" id="editor1">
 
-                    </textarea>
-                    <br />
-                    <div class="form-group">
-                        <input type="submit" value="Submit!" class="form-control btn btn-primary" required>
-                    </div>
-                </form>
+                        </textarea>
+                        <br />
+                        <div class="form-group">
+                            <input type="submit" value="Submit!" class="form-control btn btn-primary" required>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
+        @endif
     </div>
 @endsection
 
